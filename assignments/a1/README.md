@@ -265,7 +265,7 @@ Also, tools like `leaks` might not work if you compile with
 
 ## Marking Scheme
 
-### 5 marks: Overall source code readability
+### 5 marks: Source code readability
 - All code is sensibly and consistently indented, and all lines are 100
   characters in length, or less.
 - Whitespace is used to group related pieces of a code to make it easier for
@@ -278,11 +278,11 @@ Also, tools like `leaks` might not work if you compile with
   from the code itself. There should be *no* commented-out code from previous
   versions.
 
-### 2 marks: Overall source code performance and memory usage
+### 2 marks: Performance and memory usage
 - No unnecessary work is done.
 - No unnecessary memory is used.
 
-### 18 marks: Source code correctness
+### 18 marks: Correctness
 
 - **1 mark**: printing a welcome message when the program starts, saying
   something like "RPN Calculator (type 'h' for help, 'q' to quit)"
