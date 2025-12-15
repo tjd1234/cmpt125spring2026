@@ -13,8 +13,8 @@ list is below). Tokens need to be separated by spaces, e.g. `2 3 *` is a valid
 expression, but `2 3*` is an error.
 
 The tokens in a postfix expression are evaluated from left to right. A stack is
-used to store the intermediate results of the operators, and it is initially
-empty. For each token, the following actions are taken:
+used to store the intermediate results of the operators. For each token, the
+following actions are taken:
 
 - If the token is a number, it is pushed onto the top of the stack.
 - Otherwise if the token is a:
@@ -25,8 +25,8 @@ empty. For each token, the following actions are taken:
   - **unary** operator (like `abs`, `dup`, or `drop`), the top element of the
     stack is popped off, the operator is applied to it, and the result is pushed
     back onto the stack. It's an error if the stack is empty.
-  - **command** (like `clear`, `print`, or `help`), then
-    the corresponding action is taken.
+  - **command** (like `clear`, `print`, or `help`), then the corresponding
+    action is taken.
 
 For example:
 
@@ -36,8 +36,8 @@ For example:
 ```
 
 `-->` is the calculator's prompt, indicating it's waiting for the user to type
-some tokens. Suppose the user types in `2 3 *` and presses enter. The expression
-is evaluated token-by-token like this:
+some tokens. The user types in `2 3 *` and presses enter. The expression is
+evaluated token-by-token like this:
 
 - `2` is a number, so it is pushed onto the stack. The stack is now `[2]`.
 - `3` is a number, so it is pushed onto the stack. The stack is now `[2, 3]`.
@@ -47,7 +47,7 @@ is evaluated token-by-token like this:
 
 The final result, `6`, is printed to the console.
 
-Here's `1/2 + 1/3` in postfix notation:
+Let's look at a couple of more examples.Here's `1/2 + 1/3` in postfix notation:
 
 ```
 --> 1 2 / 1 3 / +
@@ -69,21 +69,16 @@ And `(2 + 3) * 4` is:
 20
 ```
 
-You can square numbers like this:
+Here's a little trick that lets you square numbers:
 
 ```
 --> 5 dup *
 25
 ```
 
-In `5 dup *`, 5 is pushed onto the stack, and then `dup` pushes a copy of 5 onto
-the stack, so that stack is now `[5, 5]`. Then `*` pops the top two elements,
-multiplies them, and pushes the result back onto the stack, leaving `[25]`.
-
-
-## Getting Started
-
-Put all your code for this assignment into [a1.cpp](a1.cpp).
+In `5 dup *`, 5 is pushed onto the stack, and then `dup` pushes a copy of 5, so
+that stack is now `[5, 5]`. Then `*` pops the top two elements, multiplies them,
+and pushes the result back onto the stack, leaving `[25]`.
 
 ## Supported Tokens
 
@@ -106,7 +101,7 @@ onto the stack. If the stack has less than two elements, it's an error.
   an error if the second element is 0.
 
 If enter is pressed after any of these binary tokens, then the top element of
-the stack is printed to the console.
+the stack is printed to the console (so the user can see the result).
 
 ### Unary Tokens
 
@@ -142,9 +137,8 @@ stack is printed to the console.
 
 ## Error Handling
 
-When an error occurs, the calculator should `throw` a `runtime_error` with a
-helpful error message. This should never crash the program, and the user should
-only see the error message. For example:
+When an error occurs, the calculator should print a helpful error message. The
+program should never crash the program. For example:
 
 ```
 RPN Calculator (type 'h' for help, 'q' to quit)
@@ -294,8 +288,8 @@ Also, tools like `leaks` might not work if you compile with
   if you implement all the names. If one, or more of the names missing, that's a
   0.5 deduction. The help message should be similar to the one in the sample
   output.
-- **2 marks**: correctly throwing errors with `throw runtime_error`, and for
-  printing helpful error messages to the console.
+- **2 marks**: correctly prints helpful error messages to the console, and never
+  crashes the program.
 
 ### Deductions
 - up to **-2 mark** if your program does not compile using the [assignment
