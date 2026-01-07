@@ -1,0 +1,17 @@
+clamp
+count_spaces
+get_name
+abs_value
+for_each
+for_up
+for_down
+while_up
+while_down
+parity_check
+separator_check
+age_check
+basic_types
+basic_types_auto
+hello_name_cin
+hello_name_getline
+hello_world

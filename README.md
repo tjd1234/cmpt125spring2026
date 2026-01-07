@@ -12,3 +12,7 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 - Assignment 3
 - Assignment 4
 - Assignment 5
+
+## Notes
+
+[Notes and code from lectures are here](private/notes).
