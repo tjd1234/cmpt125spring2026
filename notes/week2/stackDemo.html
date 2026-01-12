@@ -21,13 +21,22 @@
             padding: 20px;
         }
 
+        .wrapper {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+            align-items: flex-start;
+        }
+
         .container {
             background: white;
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
+            max-width: 550px;
             width: 100%;
+            flex: 1;
         }
 
         h1 {
@@ -49,6 +58,30 @@
             gap: 10px;
             margin-bottom: 30px;
             position: relative;
+        }
+
+        .stack-label {
+            position: absolute;
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            transition: top 0.3s ease-out;
+        }
+
+        .stack-label.bottom {
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .stack-label.top {
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .stack-item {
@@ -168,14 +201,54 @@
             font-size: 0.9em;
             margin-top: 10px;
         }
+
+        .log-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .log-panel h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .log-content {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            font-size: 0.9em;
+            line-height: 1.6;
+            min-height: 0;
+            max-height: 500px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
+    <div class="wrapper">
     <div class="container">
         <h1>Stack Visualization</h1>
         
         <div class="stack-container" id="stackContainer">
             <div class="stack-empty">Stack is empty</div>
+            <div class="stack-label bottom" id="bottomLabel">Bottom of Stack</div>
+            <div class="stack-label top" id="topLabel" style="display: none;">Top of Stack</div>
         </div>
 
         <div class="controls">
@@ -189,6 +262,12 @@
             <div>Size: <span id="stackSize">0</span></div>
             <div class="max-size-label">Max Size: 5</div>
         </div>
+    </div>
+
+    <div class="log-panel">
+        <h2>Command Log</h2>
+        <div class="log-content" id="logContent"></div>
+    </div>
     </div>
 
     <script>
@@ -209,20 +288,41 @@
         function updateStackDisplay() {
             const container = document.getElementById('stackContainer');
             const sizeDisplay = document.getElementById('stackSize');
+            const bottomLabel = document.getElementById('bottomLabel');
+            const topLabel = document.getElementById('topLabel');
             
-            // Clear container
-            container.innerHTML = '';
+            // Remove only stack items and empty message, preserve labels
+            const itemsToRemove = container.querySelectorAll('.stack-item, .stack-empty');
+            itemsToRemove.forEach(item => item.remove());
             
             if (stack.length === 0) {
-                container.innerHTML = '<div class="stack-empty">Stack is empty</div>';
+                const emptyDiv = document.createElement('div');
+                emptyDiv.className = 'stack-empty';
+                emptyDiv.textContent = 'Stack is empty';
+                container.insertBefore(emptyDiv, bottomLabel);
+                topLabel.style.display = 'none';
             } else {
                 // Display items from bottom to top (reverse order for visual)
                 stack.forEach((item, index) => {
                     const itemDiv = document.createElement('div');
                     itemDiv.className = 'stack-item';
                     itemDiv.textContent = item;
-                    container.appendChild(itemDiv);
+                    itemDiv.id = `stack-item-${index}`;
+                    container.insertBefore(itemDiv, bottomLabel);
                 });
+                
+                // Show and position top label above the topmost item
+                topLabel.style.display = 'block';
+                // Use setTimeout to ensure DOM is updated before calculating positions
+                setTimeout(() => {
+                    const topItem = document.getElementById(`stack-item-${stack.length - 1}`);
+                    if (topItem) {
+                        const containerRect = container.getBoundingClientRect();
+                        const itemRect = topItem.getBoundingClientRect();
+                        const relativeTop = itemRect.top - containerRect.top;
+                        topLabel.style.top = `${relativeTop - 30}px`;
+                    }
+                }, 0);
             }
             
             sizeDisplay.textContent = stack.length;
@@ -233,30 +333,48 @@
             const errorDiv = document.getElementById('errorMessage');
             errorDiv.textContent = message;
             errorDiv.classList.add('show');
-            
-            setTimeout(() => {
-                errorDiv.classList.remove('show');
-            }, 3000);
+        }
+
+        function clearError() {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.classList.remove('show');
+        }
+
+        function addLogEntry(command) {
+            const logContent = document.getElementById('logContent');
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            logEntry.textContent = command;
+            logContent.appendChild(logEntry);
+            // Auto-scroll to bottom
+            logContent.scrollTop = logContent.scrollHeight;
         }
 
         function pushToStack() {
+            clearError();
+            itemCounter++;
             if (stack.length >= MAX_STACK_SIZE) {
-                showError('Stack Overflow!');
+                showError('Error: stack overflow!');
+                addLogEntry(`push(${itemCounter}); // causes stack overflow`);
+                itemCounter--; // Revert the increment since push failed
                 return;
             }
             
-            itemCounter++;
             stack.push(`Item ${itemCounter}`);
+            addLogEntry(`push(${itemCounter});`);
             updateStackDisplay();
         }
 
         function popFromStack() {
+            clearError();
             if (stack.length === 0) {
-                showError("Can't pop empty stack!");
+                showError("Error: cannot pop an empty stack");
+                addLogEntry('pop(); // empty stack error');
                 return;
             }
             
             stack.pop();
+            addLogEntry('pop();');
             updateStackDisplay();
         }
 
