@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Visualization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .stack-container {
+            background: #f5f5f5;
+            border: 3px solid #333;
+            border-radius: 10px;
+            min-height: 400px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .stack-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.3s ease-out;
+            transition: transform 0.2s;
+        }
+
+        .stack-item:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stack-empty {
+            color: #999;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .push-btn {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+
+        .push-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .push-btn:active {
+            transform: translateY(0);
+        }
+
+        .pop-btn {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            color: white;
+        }
+
+        .pop-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .pop-btn:active {
+            transform: translateY(0);
+        }
+
+        .error-message {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+            animation: shake 0.5s;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .stack-info {
+            text-align: center;
+            color: #666;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+
+        .max-size-label {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stack Visualization</h1>
+        
+        <div class="stack-container" id="stackContainer">
+            <div class="stack-empty">Stack is empty</div>
+        </div>
+
+        <div class="controls">
+            <button class="push-btn" id="pushBtn" onclick="pushToStack()">Push</button>
+            <button class="pop-btn" onclick="popFromStack()">Pop</button>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+        
+        <div class="stack-info">
+            <div>Size: <span id="stackSize">0</span></div>
+            <div class="max-size-label">Max Size: 5</div>
+        </div>
+    </div>
+
+    <script>
+        const MAX_STACK_SIZE = 5;
+        let stack = [];
+        let itemCounter = 0;
+
+        function updatePushButton() {
+            const pushBtn = document.getElementById('pushBtn');
+            if (stack.length >= MAX_STACK_SIZE) {
+                pushBtn.textContent = 'Push (Full)';
+            } else {
+                const nextItem = `Item ${itemCounter + 1}`;
+                pushBtn.textContent = `Push ${nextItem}`;
+            }
+        }
+
+        function updateStackDisplay() {
+            const container = document.getElementById('stackContainer');
+            const sizeDisplay = document.getElementById('stackSize');
+            
+            // Clear container
+            container.innerHTML = '';
+            
+            if (stack.length === 0) {
+                container.innerHTML = '<div class="stack-empty">Stack is empty</div>';
+            } else {
+                // Display items from bottom to top (reverse order for visual)
+                stack.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'stack-item';
+                    itemDiv.textContent = item;
+                    container.appendChild(itemDiv);
+                });
+            }
+            
+            sizeDisplay.textContent = stack.length;
+            updatePushButton();
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+            
+            setTimeout(() => {
+                errorDiv.classList.remove('show');
+            }, 3000);
+        }
+
+        function pushToStack() {
+            if (stack.length >= MAX_STACK_SIZE) {
+                showError('Stack Overflow!');
+                return;
+            }
+            
+            itemCounter++;
+            stack.push(`Item ${itemCounter}`);
+            updateStackDisplay();
+        }
+
+        function popFromStack() {
+            if (stack.length === 0) {
+                showError("Can't pop empty stack!");
+                return;
+            }
+            
+            stack.pop();
+            updateStackDisplay();
+        }
+
+        // Initialize display
+        updateStackDisplay();
+        updatePushButton();
+    </script>
+</body>
+</html>
