@@ -15,13 +15,13 @@
 using namespace std;
 
 // version 0: no implementation
-// string trim(const string& s)
-// {
-//     // find the first non-space character
-//     // find the last non-space character
-//     // return the substring between the first and last non-space characters
-//     return s;
-// }
+string trim(const string& s)
+{
+    // find the first non-space character
+    // find the last non-space character
+    // return the substring between the first and last non-space characters
+    return s;
+}
 
 // version 1: has an error
 // string trim(const string& s)
@@ -43,26 +43,26 @@ using namespace std;
 //     return s.substr(first, last - first);
 // }
 
-// version 2: passes all tests
-string trim(const string& s)
-{
-    int n = s.size();
-    // find the first non-space character
-    int first = 0;
-    while (first < n && s[first] == ' ')
-    {
-        first++;
-    }
-    // find the last non-space character
-    int last = n - 1;
-    while (last >= 0 && s[last] == ' ')
-    {
-        last--;
-    }
-    // return the substring between the first and last non-space characters
-    string result = s.substr(first, last - first + 1);
-    return result;
-}
+// // version 2: passes all tests
+// string trim(const string& s)
+// {
+//     int n = s.size();
+//     // find the first non-space character
+//     int first = 0;
+//     while (first < n && s[first] == ' ')
+//     {
+//         first++;
+//     }
+//     // find the last non-space character
+//     int last = n - 1;
+//     while (last >= 0 && s[last] == ' ')
+//     {
+//         last--;
+//     }
+//     // return the substring between the first and last non-space characters
+//     string result = s.substr(first, last - first + 1);
+//     return result;
+// }
 
 void test_ifs()
 {
@@ -179,7 +179,7 @@ void test_table()
 
 int main()
 {
-    // test_ifs();
+    test_ifs();
     // test_asserts();
-    test_table();
+    // test_table();
 }
