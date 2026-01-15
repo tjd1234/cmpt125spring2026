@@ -14,14 +14,14 @@
 
 using namespace std;
 
-// version 0: no implementation
-string trim(const string& s)
-{
-    // find the first non-space character
-    // find the last non-space character
-    // return the substring between the first and last non-space characters
-    return s;
-}
+// // version 0: no implementation
+// string trim(const string& s)
+// {
+//     // find the first non-space character
+//     // find the last non-space character
+//     // return the substring between the first and last non-space characters
+//     return s;
+// }
 
 // version 1: has an error
 // string trim(const string& s)
@@ -43,26 +43,26 @@ string trim(const string& s)
 //     return s.substr(first, last - first);
 // }
 
-// // version 2: passes all tests
-// string trim(const string& s)
-// {
-//     int n = s.size();
-//     // find the first non-space character
-//     int first = 0;
-//     while (first < n && s[first] == ' ')
-//     {
-//         first++;
-//     }
-//     // find the last non-space character
-//     int last = n - 1;
-//     while (last >= 0 && s[last] == ' ')
-//     {
-//         last--;
-//     }
-//     // return the substring between the first and last non-space characters
-//     string result = s.substr(first, last - first + 1);
-//     return result;
-// }
+// version 2: passes all tests
+string trim(const string& s)
+{
+    int n = s.size();
+    // find the first non-space character
+    int first = 0;
+    while (first < n && s[first] == ' ')
+    {
+        first++;
+    }
+    // find the last non-space character
+    int last = n - 1;
+    while (last >= 0 && s[last] == ' ')
+    {
+        last--;
+    }
+    // return the substring between the first and last non-space characters
+    string result = s.substr(first, last - first + 1);
+    return result;
+}
 
 void test_ifs()
 {
@@ -118,26 +118,30 @@ struct Testcase
 };
 
 vector<Testcase> all_tests = {
-    Testcase{" cat  ", "cat"}, Testcase{" cat  dog ", "cat  dog"}, Testcase{"  puppy", "puppy"},
-    Testcase{"puppy   ", "puppy"}, Testcase{"puppy", "puppy"}, Testcase{"        ", ""},
+    Testcase{" cat  ", "cat"},
+    Testcase{" cat  dog ", "cat  dog"},
+    Testcase{"  puppy", "puppy"},
+    Testcase{"puppy   ", "puppy"},
+    Testcase{"puppy", "puppy"},
+    Testcase{"        ", ""},
     Testcase{"", ""},
 
-    // more test cases
-    Testcase{" ", ""},                // Single space
-    Testcase{"  ", ""},               // Two spaces
-    Testcase{"   ", ""},              // Three spaces
-    Testcase{"a", "a"},               // Single character, no spaces
-    Testcase{" a ", "a"},             // Single character with spaces
-    Testcase{" a", "a"},              // Single character, leading space
-    Testcase{"a ", "a"},              // Single character, trailing space
-    Testcase{"  a  ", "a"},           // Single character, multiple spaces
-    Testcase{"ab", "ab"},             // Two characters, no spaces
-    Testcase{" ab ", "ab"},           // Two characters with spaces
-    Testcase{"a b", "a b"},           // Two characters with space in middle
-    Testcase{"  a b  ", "a b"},       // Two words with multiple spaces
-    Testcase{"a  b", "a  b"},         // Multiple spaces in middle (should be preserved)
-    Testcase{"   a   b   ", "a   b"}, // Multiple spaces everywhere
-    Testcase{"cat\tdog", "cat\tdog"}, // Tab in middle (should be preserved)
+    // // more test cases
+    // Testcase{" ", ""},                // Single space
+    // Testcase{"  ", ""},               // Two spaces
+    // Testcase{"   ", ""},              // Three spaces
+    // Testcase{"a", "a"},               // Single character, no spaces
+    // Testcase{" a ", "a"},             // Single character with spaces
+    // Testcase{" a", "a"},              // Single character, leading space
+    // Testcase{"a ", "a"},              // Single character, trailing space
+    // Testcase{"  a  ", "a"},           // Single character, multiple spaces
+    // Testcase{"ab", "ab"},             // Two characters, no spaces
+    // Testcase{" ab ", "ab"},           // Two characters with spaces
+    // Testcase{"a b", "a b"},           // Two characters with space in middle
+    // Testcase{"  a b  ", "a b"},       // Two words with multiple spaces
+    // Testcase{"a  b", "a  b"},         // Multiple spaces in middle (should be preserved)
+    // Testcase{"   a   b   ", "a   b"}, // Multiple spaces everywhere
+    // Testcase{"cat\tdog", "cat\tdog"}, // Tab in middle (should be preserved)
 };
 
 string quote(const string& s)
@@ -179,7 +183,7 @@ void test_table()
 
 int main()
 {
-    test_ifs();
+    // test_ifs();
     // test_asserts();
-    // test_table();
+    test_table();
 }

@@ -15,4 +15,10 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 
 ## Notes
 
-[Notes and code from lectures are here](notes).
+[Slides and code from lectures are sometimes posted here](notes).
+
+## Other Links
+
+- [Python Boolean Quiz](bool_quiz.html) is a [vibe
+  coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that tests you
+  practice evaluating boolean expressions. Select the language to be C++.
