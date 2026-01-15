@@ -19,6 +19,6 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 
 ## Other Links
 
-- [Python Boolean Quiz](bool_quiz.html) is a [vibe
-  coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that tests you
+- [Boolean Expression Quiz](https://tjd1234.github.io/cmpt120spring2026/bool_quiz.html) 
+  is a [vibe coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that tests you
   practice evaluating boolean expressions. Select the language to be C++.
