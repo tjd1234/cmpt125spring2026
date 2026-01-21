@@ -168,7 +168,7 @@ Here's an example of the help message:
 RPN Calculator (type 'h' for help, 'q' to quit)
 --> h
 This is a postfix calculator: operators appear after their operands.
-e.g. 2 3 * + 1 evaluates to 7, the same as 1 + 2 * 3.
+e.g. 2 3 * 1 + evaluates to 7, the same as 1 + 2 * 3.
 ```
 
 ## Submit Your Work
