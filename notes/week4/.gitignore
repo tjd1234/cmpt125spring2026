@@ -3,3 +3,6 @@ dangling_pointer_demo
 memory_leak_demo
 double_deletion_demo
 swap_demo
+c_string_funcs
+c_string_demo
+cpp_string_demo
