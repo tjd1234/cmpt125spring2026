@@ -6,3 +6,6 @@ swap_demo
 c_string_funcs
 c_string_demo
 cpp_string_demo
+stringBuffer
+stringBuffer2
+cpp_append

@@ -22,7 +22,7 @@ int main()
     //
     // C++ automatically adds a null terminator to the end of string literals.
     //
-    const char* first  = "Hello";
+    const char* first  = "Hello"; 
     const char* second = " World!";
 
     //
