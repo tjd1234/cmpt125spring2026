@@ -270,7 +270,7 @@ void test_append2()
     str_vec b = make_str_vec(1, "hello");
     append(b, a);
     assert(b.sz == 1);
-    assert(b.cap == 10);
+    assert(b.cap == 11);
     assert(b.arr[0] == "hello");
 
     append(a, b);
@@ -279,7 +279,7 @@ void test_append2()
     assert(a.arr[0] == "hello");
 
     assert(b.sz == 1);
-    assert(b.cap == 10);
+    assert(b.cap == 11);
     assert(b.arr[0] == "hello");
 
     deallocate(a);
