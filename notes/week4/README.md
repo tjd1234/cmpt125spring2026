@@ -16,3 +16,5 @@
   strings
 - [stringBuffer.cpp](stringBuffer.cpp): implementation of a simple string buffer
   that improves on the C-string functions (but not as easy as `std::string`)
+- [stringBuffer2.cpp](stringBuffer2.cpp): modifies the string buffer to allocate
+  more memory than needed, to improve performance of appending

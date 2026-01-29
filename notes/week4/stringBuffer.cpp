@@ -202,12 +202,15 @@ void append_performance_test()
     // const string filename = "tenKwords.txt";
     const string filename = "enable1.txt";
     cout << "Performance test for " << filename << " ...\n";
+
     StringBuffer s = make_StringBuffer("");
+    // string s;
     ifstream words(filename);
     string word;
     while (words >> word)
     {
         append(s, make_StringBuffer(word.c_str()));
+        // s += word;
     }
 
     //
@@ -224,7 +227,8 @@ void append_performance_test()
          << " KB (" << pct_used * 100 << "%)\n";
     cout << "Unused: " << setw(7) << unused_bytes << " bytes, " << setw(4) << unused_bytes / 1024
          << " KB (" << pct_unused * 100 << "%)\n";
-    cout << " Total: " << setw(7) << total_bytes << " bytes, " << setw(4) << total_bytes / 1024 << " KB ( 100%)\n";
+    cout << " Total: " << setw(7) << total_bytes << " bytes, " << setw(4) << total_bytes / 1024
+         << " KB ( 100%)\n";
     cout << "(" << CHAR_BIT << " bits per char)\n";
 }
 

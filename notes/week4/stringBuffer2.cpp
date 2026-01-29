@@ -260,8 +260,8 @@ void append_performance_test()
     //
     // report the results
     //
-    int total_bytes   = s.capacity();
-    int used_bytes    = s.size();
+    int total_bytes   = s.capacity;
+    int used_bytes    = s.size;
     int unused_bytes  = total_bytes - used_bytes;
     double pct_used   = double(used_bytes) / total_bytes;
     double pct_unused = double(unused_bytes) / total_bytes;
