@@ -19,6 +19,15 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 
 ## Other Links
 
-- [Boolean Expression Quiz](https://tjd1234.github.io/cmpt120spring2026/bool_quiz.html) 
-  is a [vibe coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that tests you
-  practice evaluating boolean expressions. Select the language to be C++.
+- [Stack toy](https://tjd1234.github.io/Vibecoded-Visualizations/stackToy.html)
+  is a [vibe coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that
+  demonstrates stacks.
+- [Boolean Expression
+  Quiz](https://tjd1234.github.io/cmpt120spring2026/bool_quiz.html) is a [vibe
+  coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that asks you to
+  evaluate boolean expressions. Select the language to be C++.
+- [Max algorithm
+  visualization](https://tjd1234.github.io/Vibecoded-Visualizations/maxAlgorithm.html)
+  is a [vibe coded](https://en.wikipedia.org/wiki/Vibe_coding) web app that
+  gives some insight into why the inner-most line of the max algorithm is
+  executed so few times.
