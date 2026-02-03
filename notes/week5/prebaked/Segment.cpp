@@ -21,7 +21,7 @@ struct Point
     }
 
     // constructor
-    Point(double x, double y)
+    Point(int x, int y)
     {
         this->x = x; // x = x would be wrong
         this->y = y; // y = y would be wrong
@@ -70,6 +70,16 @@ struct Segment
         this->end.set_y(end.get_y());
     }
 
+    // constructor with start and end points as integers
+    Segment(int start_x, int start_y, int end_x, int end_y)
+    {
+        this->start.set_x(start_x);
+        this->start.set_y(start_y);
+        this->end.set_x(end_x);
+        this->end.set_y(end_y);
+    }
+
+
     //
     // copy constructor
     //
@@ -110,7 +120,7 @@ struct Segment
     {
         int mid_x = (this->start.get_x() + this->end.get_x()) / 2;
         int mid_y = (this->start.get_y() + this->end.get_y()) / 2;
-        return Point(mid_x, mid_y);
+        return Point{mid_x, mid_y};
     }
 
     void print() const
@@ -127,8 +137,8 @@ struct Segment
 
 void demo1()
 {
-    Point p1{1.0, 2.0};
-    Point p2{3.0, 4.0};
+    Point p1{1, 2};
+    Point p2{3, 4};
     Segment s{p1, p2};
     s.println();
     cout << "  length: " << s.length() << "\n";
@@ -141,7 +151,18 @@ void demo1()
     cout << "midpoint: " << s.midpoint().toString() << "\n";
 }
 
+void demo2()
+{
+    vector<Segment> segments = {Segment(1, 2, 3, 4), Segment(5, 6, 7, 8), Segment(9, 10, 11, 12)};
+
+    for (const Segment& s : segments)
+    {
+        s.println();
+    }
+}
+
 int main()
 {
-    demo1();
+    // demo1();
+    demo2();
 }

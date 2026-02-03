@@ -21,7 +21,7 @@ struct Point
     }
 
     // constructor
-    Point(double x, double y)
+    Point(int x, int y)
     {
         this->x = x; // x = x would be wrong
         this->y = y; // y = y would be wrong

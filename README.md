@@ -9,7 +9,7 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 
 - [Assignment 1](assignments/a1/README.md)
 - [Assignment 2](assignments/a2/README.md)
-- Assignment 3
+- [Assignment 3](assignments/a3/README.md)
 - Assignment 4
 - Assignment 5
 

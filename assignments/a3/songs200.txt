@@ -1,0 +1,200 @@
+Let It Be	The Beatles	243
+Hey Jude	The Beatles	431
+Yesterday	The Beatles	125
+Come Together	The Beatles	259
+Here Comes the Sun	The Beatles	185
+Bohemian Rhapsody	Queen	354
+Don't Stop Me Now	Queen	209
+We Will Rock You	Queen	122
+We Are the Champions	Queen	179
+Hotel California	Eagles	391
+Take It Easy	Eagles	211
+Desperado	Eagles	215
+Stairway to Heaven	Led Zeppelin	482
+Kashmir	Led Zeppelin	515
+Whole Lotta Love	Led Zeppelin	333
+Like a Rolling Stone	Bob Dylan	369
+Blowin' in the Wind	Bob Dylan	166
+Purple Rain	Prince	510
+When Doves Cry	Prince	349
+Billie Jean	Michael Jackson	294
+Thriller	Michael Jackson	358
+Beat It	Michael Jackson	258
+Smooth Criminal	Michael Jackson	257
+Smells Like Teen Spirit	Nirvana	301
+Come As You Are	Nirvana	219
+Losing My Religion	R.E.M.	268
+Everybody Hurts	R.E.M.	310
+Wonderwall	Oasis	258
+Don't Look Back in Anger	Oasis	288
+Creep	Radiohead	238
+Karma Police	Radiohead	261
+No Surprises	Radiohead	229
+Clocks	Coldplay	307
+Fix You	Coldplay	295
+Viva La Vida	Coldplay	242
+Rolling in the Deep	Adele	228
+Someone Like You	Adele	285
+Hello	Adele	295
+Imagine	John Lennon	183
+Jealous Guy	John Lennon	254
+American Pie	Don McLean	515
+Piano Man	Billy Joel	339
+Uptown Girl	Billy Joel	197
+Like a Prayer	Madonna	342
+Vogue	Madonna	302
+Material Girl	Madonna	240
+Born in the U.S.A.	Bruce Springsteen	279
+Dancing in the Dark	Bruce Springsteen	241
+Sweet Child O' Mine	Guns N' Roses	356
+November Rain	Guns N' Roses	537
+Livin' on a Prayer	Bon Jovi	249
+Africa	Toto	295
+Take On Me	a-ha	225
+Every Breath You Take	The Police	253
+Roxanne	The Police	191
+With or Without You	U2	296
+One	U2	276
+I Still Haven't Found What I'm Looking For	U2	277
+Hallelujah	Leonard Cohen	283
+Suzanne	Leonard Cohen	217
+Fast Car	Tracy Chapman	296
+No Woman, No Cry	Bob Marley & The Wailers	255
+Three Little Birds	Bob Marley & The Wailers	180
+Redemption Song	Bob Marley & The Wailers	233
+Take Me to Church	Hozier	241
+Poker Face	Lady Gaga	238
+Bad Romance	Lady Gaga	295
+Shake It Off	Taylor Swift	219
+Blank Space	Taylor Swift	231
+Anti-Hero	Taylor Swift	200
+Uptown Funk	Mark Ronson ft. Bruno Mars	270
+Just the Way You Are	Bruno Mars	221
+Locked Out of Heaven	Bruno Mars	233
+Hey Ya!	OutKast	235
+Ms. Jackson	OutKast	270
+Lose Yourself	Eminem	326
+Stan	Eminem	404
+Nuthin' but a 'G' Thang	Dr. Dre	238
+California Love	2Pac	281
+Juicy	The Notorious B.I.G.	300
+Empire State of Mind	Jay-Z ft. Alicia Keys	276
+Crazy in Love	Beyoncé	235
+Single Ladies	Beyoncé	193
+Respect	Aretha Franklin	149
+I Say a Little Prayer	Aretha Franklin	217
+My Girl	The Temptations	165
+Ain't No Mountain High Enough	Marvin Gaye & Tammi Terrell	171
+What's Going On	Marvin Gaye	233
+Superstition	Stevie Wonder	251
+Isn't She Lovely	Stevie Wonder	395
+Lean on Me	Bill Withers	257
+A Change Is Gonna Come	Sam Cooke	191
+Let It Be	The Beatles	243
+Hey Jude	The Beatles	431
+Yesterday	The Beatles	125
+Come Together	The Beatles	259
+Here Comes the Sun	The Beatles	185
+Bohemian Rhapsody	Queen	354
+Don't Stop Me Now	Queen	209
+We Will Rock You	Queen	122
+We Are the Champions	Queen	179
+Hotel California	Eagles	391
+Take It Easy	Eagles	211
+Desperado	Eagles	215
+Stairway to Heaven	Led Zeppelin	482
+Kashmir	Led Zeppelin	515
+Whole Lotta Love	Led Zeppelin	333
+Like a Rolling Stone	Bob Dylan	369
+Blowin' in the Wind	Bob Dylan	166
+Purple Rain	Prince	510
+When Doves Cry	Prince	349
+Billie Jean	Michael Jackson	294
+Thriller	Michael Jackson	358
+Beat It	Michael Jackson	258
+Smooth Criminal	Michael Jackson	257
+Smells Like Teen Spirit	Nirvana	301
+Come As You Are	Nirvana	219
+Losing My Religion	R.E.M.	268
+Everybody Hurts	R.E.M.	310
+Wonderwall	Oasis	258
+Don't Look Back in Anger	Oasis	288
+Creep	Radiohead	238
+Karma Police	Radiohead	261
+No Surprises	Radiohead	229
+Clocks	Coldplay	307
+Fix You	Coldplay	295
+Viva La Vida	Coldplay	242
+Rolling in the Deep	Adele	228
+Someone Like You	Adele	285
+Hello	Adele	295
+Imagine	John Lennon	183
+Jealous Guy	John Lennon	254
+American Pie	Don McLean	515
+Piano Man	Billy Joel	339
+Uptown Girl	Billy Joel	197
+Like a Prayer	Madonna	342
+Vogue	Madonna	302
+Material Girl	Madonna	240
+Born in the U.S.A.	Bruce Springsteen	279
+Dancing in the Dark	Bruce Springsteen	241
+Sweet Child O' Mine	Guns N' Roses	356
+November Rain	Guns N' Roses	537
+Livin' on a Prayer	Bon Jovi	249
+Africa	Toto	295
+Take On Me	a-ha	225
+Every Breath You Take	The Police	253
+Roxanne	The Police	191
+With or Without You	U2	296
+One	U2	276
+I Still Haven't Found What I'm Looking For	U2	277
+Hallelujah	Leonard Cohen	283
+Suzanne	Leonard Cohen	217
+Fast Car	Tracy Chapman	296
+No Woman, No Cry	Bob Marley & The Wailers	255
+Three Little Birds	Bob Marley & The Wailers	180
+Redemption Song	Bob Marley & The Wailers	233
+Take Me to Church	Hozier	241
+Poker Face	Lady Gaga	238
+Bad Romance	Lady Gaga	295
+Shake It Off	Taylor Swift	219
+Blank Space	Taylor Swift	231
+Anti-Hero	Taylor Swift	200
+Uptown Funk	Mark Ronson ft. Bruno Mars	270
+Just the Way You Are	Bruno Mars	221
+Locked Out of Heaven	Bruno Mars	233
+Hey Ya!	OutKast	235
+Ms. Jackson	OutKast	270
+Lose Yourself	Eminem	326
+Stan	Eminem	404
+Nuthin' but a 'G' Thang	Dr. Dre	238
+California Love	2Pac	281
+Juicy	The Notorious B.I.G.	300
+Empire State of Mind	Jay-Z ft. Alicia Keys	276
+Crazy in Love	Beyoncé	235
+Single Ladies	Beyoncé	193
+Respect	Aretha Franklin	149
+I Say a Little Prayer	Aretha Franklin	217
+My Girl	The Temptations	165
+Ain't No Mountain High Enough	Marvin Gaye & Tammi Terrell	171
+What's Going On	Marvin Gaye	233
+Superstition	Stevie Wonder	251
+Isn't She Lovely	Stevie Wonder	395
+Lean on Me	Bill Withers	257
+A Change Is Gonna Come	Sam Cooke	191
+Let It Be	The Beatles	243
+Hey Jude	The Beatles	431
+Yesterday	The Beatles	125
+Come Together	The Beatles	259
+Here Comes the Sun	The Beatles	185
+Bohemian Rhapsody	Queen	354
+Don't Stop Me Now	Queen	209
+We Will Rock You	Queen	122
+We Are the Champions	Queen	179
+Hotel California	Eagles	391
+Take It Easy	Eagles	211
+Desperado	Eagles	215
+Stairway to Heaven	Led Zeppelin	482
+Kashmir	Led Zeppelin	515
+Whole Lotta Love	Led Zeppelin	333
+Like a Rolling Stone	Bob Dylan	369
