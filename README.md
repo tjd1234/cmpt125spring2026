@@ -4,7 +4,6 @@ For grades, assignment submissions, and other course information, see [Canvas](h
 
 For course notes, see the [Obsidian lecture notes site](https://publish.obsidian.md/cmpt125).
 
-
 ## Assignments
 
 - [Assignment 1](assignments/a1/README.md)
@@ -12,6 +11,11 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 - [Assignment 3](assignments/a3/README.md)
 - Assignment 4
 - Assignment 5
+
+## Sample Exams
+
+A number of sample exams are available [here](sample_exams). Most are from CMPT
+135, which is very similar to CMPT 125.
 
 ## Notes
 
