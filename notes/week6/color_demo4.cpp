@@ -1,3 +1,5 @@
+// color_demo4.cpp
+
 // color_demo2.cpp
 
 #include <iostream>
@@ -68,85 +70,65 @@ class Color
     }
 }; // class Color
 
-// TODO: What does : public Color mean?
-// "is a"
-class Named_color : public Color
+class Named_color
 {
     string name;
+    Color color;
 
   public:
     Named_color(const string& n, int r, int g, int b)
         // initializer list
-        : Color(r, g, b), // TODO: What does this do?
-          name(n)        // TODO: What does this do?
+        : name(n), color(r, g, b)
     {
-        // TODO: What should we do here?
     }
 
-    // TODO: What would be a good default constructor? Hint: Color already has a
     // default constructor.
-    Named_color() 
+    Named_color()
         // initializer list
-        : Color(),
-          name("black")
-    { 
+        : Named_color("black", 0, 0, 0)
+    {
     }
 
-    // TODO: What would be a good copy constructor? Hint: You want to copy all
-    // the inherited variable, and also name. Remember that red, green, and blue
-    // are private, so you cannot assign them directly.
+    // copy constructor
     Named_color(const Named_color& other)
-    // initializer list
-    : Color(other),
-      name(other.name)
-    { 
+        // initializer list
+        : name(other.name), color(other.color)
+    {
     }
 
     // getters
     string get_name() const { return name; }
+    Color get_color() const { return color; }
 
-    // TODO: What's happening here? There is already a to_string method in Color.
-    string to_string() const { 
-        // int r = get_red();
-        // int g = get_green();
-        // int b = get_blue();
-        // return name + ": " + std::to_string(r) + ", " + std::to_string(g) + ", " + std::to_string(b);
-        return name + ": " + Color::to_string();
-    }
-
+    // comparison operators: Named_colors are equal if their names and colors
+    // are the same
     bool operator==(const Named_color& other) const
     {
-        return name == other.name && Color::operator==(other);
+        return name == other.name && color == other.color;
     }
 
-    bool operator!=(const Named_color& other) const
-    {
-        return !(*this == other);
-    }
+    bool operator!=(const Named_color& other) const { return !(*this == other); }
+
+    string to_string() const { return name + "=" + color.to_string(); }
 
 }; // class Named_color
 
 int main()
 {
     Named_color truck("firetruck", 255, 0, 0);
-    Named_color bird("bird", 255, 0, 0);
+    Named_color bird("bird", 0, 255, 0);
 
     cout << "     truck name: " << truck.get_name() << endl;
 
-    // TODO: Notice the setters called here were not defined in the Named_color class.
-    cout << "    truck color: " << truck.get_red() << ", " 
-                                << truck.get_green() << ", "
-                                << truck.get_blue() << endl;
+    cout << "    truck color: " << truck.get_color().to_string() << endl;
     cout << "truck to string: " << truck.to_string() << endl;
 
-    // TODO: What does this print? Note that operator== was not defined in the
-    // Named_color class.
-    if (bird != truck)
+    if (bird == truck)
     {
-        cout << "bird and truck are the different" << endl;
+        cout << "bird and truck are the same color" << endl;
     }
     else
     {
-        cout << "bird and truck are the same" << endl;
+        cout << "bird and truck are different colors" << endl;
     }
 }

@@ -11,6 +11,7 @@ using namespace std;
 //
 class Color
 {
+private:
     // TODO: How does C++ know that these are private?
     int red;
     int green;
@@ -20,34 +21,52 @@ class Color
     Color(int r, int g, int b)
     {
         // TODO: How could you check that the values are in the range 0-255?
+        if (r < 0 || r > 255)
+            throw runtime_error("bad red value");
+        if (g < 0 || g > 255)
+            throw runtime_error("bad green value");
+        if (b < 0 || b > 255)
+            throw runtime_error("bad blue value");
         red   = r;
         green = g;
         blue  = b;
     }
 
     // TODO: What would be a good default constructor?
+    Color() {
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
 
     // TODO: What would be a good copy constructor?
+    Color(const Color& other) {
+        red = other.red;
+        green = other.green;
+        blue = other.blue;
+    }
 
-    // setters
+    // getters
     int get_red() const { return red; }
 
     int get_green() const { return green; }
 
     int get_blue() const { return blue; }
 
-    // TODO: Why no getters?
+    // immutable
+
+    // TODO: Why no setters?
 
     // TODO: What should operator== and operator!= do?
-    // bool operator==(const Color& other) const
-    // {
-    //     // ...
-    // }
+    bool operator==(const Color& other) const
+    {
+        return red == other.red && green == other.green && blue == other.blue;
+    }
 
-    // bool operator!=(const Color& other) const
-    // {
-    //     // ...
-    // }
+    bool operator!=(const Color& other) const
+    {
+        return !(*this == other);
+    }
 
     string to_string() const
     {
@@ -60,17 +79,23 @@ class Color
 
 }; // class Color
 
+ostream& operator<<(ostream& os, const Color& c)
+{
+    os << c.to_string();
+    return os;
+}
+
 int main()
 {
     Color truck(255, 0, 0);
     Color bird(0, 255, 0);
     Color cloud(128, 128, 128);
-    Color ink(0, 0, 0);
-    Color background(255, 255, 255);
+    Color ink; // default constructor
+    Color background(ink); // copy constructor
 
-    cout << "     truck: " << truck.to_string() << endl;
-    cout << "      bird: " << bird.to_string() << endl;
-    cout << "     cloud: " << cloud.to_string() << endl;
-    cout << "       ink: " << ink.to_string() << endl;
-    cout << "background: " << background.to_string() << endl;
+    cout << "     truck: " << truck << endl;
+    cout << "      bird: " << bird << endl;
+    cout << "     cloud: " << cloud << endl;
+    cout << "       ink: " << ink << endl;
+    cout << "background: " << background << endl;
 }

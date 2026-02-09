@@ -30,10 +30,18 @@ class int_vec : public vector<int>
     // TODO: Write a constructor that takes a name, and initialize the vector to
     // the empty vector. Hint: Use an initialization list to call the
     // vector<int>() constructor.
+    int_vec(const string& s) 
+    // initialization list
+    : vector<int>(), 
+    name(s) {}
 
     // TODO: Write a default constructor that calls the constructor above it
     // with the name "<no name>". Hint: Use constructor delegation to call the
     // constructor above it.
+    int_vec() 
+    // initialization list
+    : int_vec("<no name>") // constructor delegation
+    {}
 
     // TODO: Write a name getter that returns the name of the vector.
     string get_name() const { return name; }

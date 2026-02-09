@@ -106,11 +106,15 @@ class Named_color : public Color
 // color in the range 0.0 to 1.0. A colors brightness is the sum of the red,
 // green, and blue values divided by 255.0 * 3.0.
 
-// Returns the brightness of a color, from 0.0 (darkest) to 1.0 (brightest).
 double brightness(const Color& c)
 {
     return (c.get_red() + c.get_green() + c.get_blue()) / (255.0 * 3.0);
 }
+
+// double brightness(const Named_color& c)
+// {
+//     return (c.get_red() + c.get_green() + c.get_blue()) / (255.0 * 3.0);
+// }
 
 int main()
 {

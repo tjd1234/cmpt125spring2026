@@ -71,14 +71,27 @@ class int_vec : public vector<int>
 
     // TODO: Write a method called reverse() that reverses the order of the
     // elements in the vector.
+    void reverse()
+    {
+        std::reverse(begin(), end());
+    }
 
     // TODO: Write a method called sort_increasing() that sorts the elements of
     // the vector in increasing order. Hint: Use std::sort from the standard
     // library to help.
+    void sort_increasing()
+    {
+        std::sort(begin(), end());
+    }
 
     // TODO: Write a method called sort_decreasing() that sorts the elements of
     // the vector in decreasing order. Hint: Use methods you've already written
     // to help.
+    void sort_decreasing()
+    {
+        sort_increasing();
+        reverse();
+    }
 
 }; // class int_vec
 

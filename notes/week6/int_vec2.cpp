@@ -25,7 +25,23 @@ class int_vec : public vector<int>
   public:
     // TODO: Write a methods called sum() that returns the sum of the elements
     // in the vector.
-
+    // int sum() const { return std::accumulate(begin(), end(), 0); }
+    // int sum() const {
+    //     int result = 0;
+    //     for (int n : *this)
+    //     {
+    //         result += n;
+    //     }
+    //     return result;
+    // }
+    int sum() const {
+        int result = 0;
+        for (int i = 0; i < size(); i++)
+        {
+            result += (*this)[i];
+        }
+        return result;
+    }
 
 }; // class int_vec
 
@@ -39,5 +55,5 @@ int main()
     for (int n : v)
         cout << n << "\n";
 
-    // cout << "sum  = " << v.sum() << "\n";
+    cout << "sum = " << v.sum() << "\n";
 } // main
