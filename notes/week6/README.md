@@ -1,8 +1,10 @@
 # Sample Code
 
 - [color_demo.cpp](color_demo.cpp), implements Color class
-- [color_demo2.cpp](color_demo2.cpp), implements Named_color class that inherits from Color
+- [color_demo2.cpp](color_demo2.cpp), implements Named_color class that inherits
+  from Color
 - [color_demo3.cpp](color_demo3.cpp), adds a brightness function
+- [color_demo4.cpp](color_demo4.cpp), uses composition to implement Named_color 
 
 - [int_vec1.cpp](int_vec1.cpp), a simple vector of integers
 - [int_vec2.cpp](int_vec2.cpp), adds a sum method

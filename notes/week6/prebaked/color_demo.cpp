@@ -47,14 +47,14 @@ class Color
         blue  = other.blue;
     }
 
-    // setters
+    // getters
     int get_red() const { return red; }
 
     int get_green() const { return green; }
 
     int get_blue() const { return blue; }
 
-    // TODO: Why no getters?
+    // TODO: Why no setters?
 
     // TODO: What should operator== and operator!= do?
     bool operator==(const Color& other) const

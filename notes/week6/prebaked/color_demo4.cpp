@@ -1,7 +1,5 @@
 // color_demo4.cpp
 
-// color_demo2.cpp
-
 #include <iostream>
 
 using namespace std;
@@ -47,7 +45,7 @@ class Color
         blue  = other.blue;
     }
 
-    // setters
+    // getters
     int get_red() const { return red; }
 
     int get_green() const { return green; }
