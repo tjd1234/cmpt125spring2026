@@ -58,7 +58,7 @@ struct Point
 void demo1()
 {
     Point origin;
-    Point p1{1.0, 2.0};
+    Point p1{1, 2};
     Point p2{p1};
 
     cout << "origin: " << origin.toString() << "\n";
