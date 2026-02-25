@@ -35,6 +35,7 @@ class RGB_color
 
 }; // class RGB_color
 
+
 // definition of RGB_color
 RGB_color::RGB_color()
 {

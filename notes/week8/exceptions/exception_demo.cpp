@@ -65,27 +65,26 @@ void example4()
     cout << "(call with a try/catch block in main to see destructor output)" << endl;
     Mem m;
     error("thrown from example4()");
-    cout << "example4() finished\n";
+    cout << "example4() finished." << endl;
 }
 
+//
+// If an exception leaves main, then the program might not propagate the
+// exception down the call stack, e.g. not calling the destructors of local
+// objects. So to prevent that we put the try/catch block in main.
+//
 int main()
 {
-    try {
-    // example1();
-    // example2();
-    // example3();
-    example4();
-    } catch (...) {
+    try
+    {
+        // example1();
+        // example2();
+        // example3();
+        example4();
+    }
+    catch (...)
+    {
         cout << "Caught an exception!\n";
         cout << "Program terminated.\n";
     }
 }
-
-// int main()
-// {
-//     // example1();
-//     // example2();
-//     // example3();
-//     example4();
-//     cout << "main() finished\n";
-// }
