@@ -2,7 +2,7 @@
 
 For grades, assignment submissions, and other course information, see [Canvas](https://sfu.instructure.com/).
 
-For course notes, see the [Obsidian lecture notes site](https://publish.obsidian.md/cmpt125).
+For course notes, see the [Obsidian lecture notes site](https://publish.obsidian.md/cmpt125). Here is a snapshot of the site the week before midterm: [obsidian_pre_midterm.zip](obsidian_pre_midterm.zip).
 
 ## Assignments
 
@@ -17,9 +17,11 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 A number of sample exams are available [here](sample_exams). Most are from CMPT
 135, which is very similar to CMPT 125.
 
-## Notes
+## Lecture Notes
 
 [Slides and code from lectures are sometimes posted here](notes).
+
+For the main course notes, see the [Obsidian lecture notes site](https://publish.obsidian.md/cmpt125).
 
 ## Other Links
 
