@@ -6,13 +6,13 @@ using namespace std;
 
 void f(int n)
 {
-    cout << n << ": hello!\n";
+    cout << n << ": hello!" << endl;
     f(n + 1);
 }
 
 void demo1()
 {
-    f(5);
+    f(1);
 }
 
 void say_hello(int n)
@@ -118,10 +118,10 @@ void demo6()
 
 int main()
 {
-    // demo1();
+    demo1();
     // demo2();
     // demo3();
     // demo4();
     // demo5();
-    demo6();
+    // demo6();
 }
