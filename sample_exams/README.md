@@ -1,4 +1,4 @@
 # Sample Exam Questions
 
-These are sample exams from previous years. They are mostly from CMPT 135, which
-is very similar to CMPT 125.
+These are sample exams from previous years. Some arefrom CMPT 135, which is very
+similar to CMPT 125.
