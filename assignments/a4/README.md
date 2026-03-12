@@ -298,10 +298,9 @@ Please put all your code into [a4.cpp](a4.cpp). Use the `mem` array defined in
 You must implement `print_memory`, `allocate_first_fit`, and `deallocate` using
 exactly the given function headers. 
 
-Include a `main()` function that tests the `MemoryAllocator` class. The marker
-will test your code by running your `main()` function, and also using their own
-test functions and tools (e.g. `valgrind` or `leaks` to check for memory
-errors).
+Include a `main()` function that thoroughly tests your code. The marker will
+test your code by running your `main()`, and also using their own test functions
+and tools (e.g. `valgrind` or `leaks` to check for memory errors).
 
 The marker will compile your file with [assignment 4 makefile](makefile), and a
 copy of [Memory.h](Memory.h) and [cmpt_error.h](cmpt_error.h) will be in the

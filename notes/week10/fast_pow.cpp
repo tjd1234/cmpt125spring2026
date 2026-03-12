@@ -13,12 +13,33 @@
 
 using namespace std;
 
+//    a^0      = 1
+//    a^(2k)   = a^k * a^k
+//    a^(2k+1) = a * a^k * a^k
+int mult_count = 0;
 int fast_pow(int a, int n)
 {
     assert(a > 1);
     assert(n >= 0);
 
-    // TODO: implement this function
+    if (n == 0)
+        return 1; // base case
+    if (n % 2 == 0)
+    { // n is even
+        cout << "1";
+        int k  = n / 2;
+        int ak = fast_pow(a, k);
+        mult_count += 1;
+        return ak * ak;
+    }
+    else
+    { // n is odd
+        cout << "0";
+        int k = (n - 1) / 2;
+        int ak = fast_pow(a, k);
+        mult_count += 2;
+        return a * ak * ak;
+    }
 }
 
 void fast_pow_test()
@@ -40,5 +61,10 @@ void fast_pow_test()
 
 int main()
 {
-    fast_pow_test();
+    // fast_pow_test();
+    for(int i = 0; i <= 20; i++) {
+        mult_count = 0;
+        fast_pow(2, i);
+        cout << "  2^" << i << ": " << mult_count << endl;
+    }
 }
