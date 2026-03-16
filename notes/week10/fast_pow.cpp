@@ -26,7 +26,7 @@ int fast_pow(int a, int n)
         return 1; // base case
     if (n % 2 == 0)
     { // n is even
-        cout << "1";
+        cout << "0";
         int k  = n / 2;
         int ak = fast_pow(a, k);
         mult_count += 1;
@@ -34,7 +34,7 @@ int fast_pow(int a, int n)
     }
     else
     { // n is odd
-        cout << "0";
+        cout << "1";
         int k = (n - 1) / 2;
         int ak = fast_pow(a, k);
         mult_count += 2;
