@@ -17,6 +17,10 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 A number of sample exams are available [here](sample_exams). Most are from CMPT
 135, which is very similar to CMPT 125.
 
+Here's a set of [linear search questions](125/public/sample_exams/linear_search_practice/linear_search.cpp) 
+([solutions](125/public/sample_exams/linear_search_practice/linear_search_sol.cpp)) that we recommend you
+do. It's a great way to practice for exams.
+
 ## Lecture Notes
 
 [Slides and code from lectures are sometimes posted here](notes).

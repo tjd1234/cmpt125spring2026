@@ -8,6 +8,18 @@
 
 using namespace std;
 
+// Returns true if v is in ascending sorted order, and false otherwise. An empty
+// vector is considered to be sorted.
+bool is_sorted(const vector<int>& v)
+{
+    for (int i = 1; i < v.size(); i++)
+    {
+        if (v[i - 1] > v[i])
+            return false;
+    }
+    return true;
+}
+
 ostream& operator<<(ostream& os, const vector<int>& v)
 {
     os << "{";
