@@ -23,16 +23,25 @@ struct Node
 // adds a new node with the given value to the front of the list. Question: why
 // is head passed as Node*& instead of just Node*? 
 
+// Node* head = nullptr; // empty list
+// head = new Node{4, head};
+// head = new Node{3, head};
+// head = new Node{2, head};
+// head = new Node{1, head};
 
 // TODO 4: Write a void function called print_list(Node* p) that print the
-// values of the list start at the node p point to. Then use this to print the
-// values of the list in main.
+// values of the list starting at the node p points to. Then use this to print
+// the values of the list in main.
 
+// copy from linked_list3.cpp
 
 // TODO 5: Write a void function called remove_front(Node*& head) that removes
 // the first node from the list. Then use this to remove the first node from the
 // list in main.
 
+// Node* p = head->next; // temp pointer
+// delete head;
+// head = p;
 
 // TODO 6: Write a void function called clear_list(Node*& head) that deletes all
 // the nodes in the list. Then use this to clear the list in main.
@@ -41,8 +50,7 @@ struct Node
 int main()
 {
     // TODO 1: Make an empty list with no values.
-
-
+    
     // TODO 3: Add the values 1, 2, 3, 4 to the list so they are in the order
     // 1, 2, 3, 4.
 
