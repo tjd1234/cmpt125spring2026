@@ -23,8 +23,7 @@ using any AI tools:
 
 - [array questions](sample_exams/array_practice/array_ex_start.cpp) ([solutions](sample_exams/array_practice/array_ex_sol.cpp))
 - [linear search questions](sample_exams/linear_search_practice/linear_search.cpp) ([solutions](sample_exams/linear_search_practice/linear_search_sol.cpp))
-
-Here is the [linked list quiz](notes/week12/linked_list_quiz.pdf)([solutions](notes/week12/linked_list_quiz_sol.pdf)) done in lecture in week 13.
+- [linked list quiz](notes/week12/linked_list_quiz.pdf) ([solutions](notes/week12/linked_list_quiz_sol.pdf)) done in lecture.
 
 ## Lecture Notes
 
