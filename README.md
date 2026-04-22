@@ -17,9 +17,9 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 A number of sample exams are available [here](sample_exams). Most are from CMPT
 135, which is very similar to CMPT 125.
 
-Here are some practice questions. Important: to practice for exams, try doing
-these questions by hand on paper, or at least on your computer *without* using
-any AI tools:
+Here are some practice questions. **Important**: to practice for exams, try
+doing these questions by hand on paper, or at least on your computer *without*
+using any AI tools:
 
 - [array questions](sample_exams/array_practice/array_ex_start.cpp) ([solutions](sample_exams/array_practice/array_ex_sol.cpp))
 - [linear search questions](sample_exams/linear_search_practice/linear_search.cpp) ([solutions](sample_exams/linear_search_practice/linear_search_sol.cpp))
