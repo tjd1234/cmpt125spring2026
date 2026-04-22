@@ -17,8 +17,12 @@ For course notes, see the [Obsidian lecture notes site](https://publish.obsidian
 A number of sample exams are available [here](sample_exams). Most are from CMPT
 135, which is very similar to CMPT 125.
 
-Here's a set of [linear search questions](sample_exams/linear_search_practice/linear_search.cpp)
-([solutions](sample_exams/linear_search_practice/linear_search_sol.cpp)) that we recommend you do. It's a great way to practice for exams.
+Here are some practice questions. Important: to practice for exams, try doing
+these questions by hand on paper, or at least on your computer *without* using
+any AI tools:
+
+- [array questions](sample_exams/array_practice/array_ex_start.cpp) ([solutions](sample_exams/array_practice/array_ex_sol.cpp))
+- [linear search questions](sample_exams/linear_search_practice/linear_search.cpp) ([solutions](sample_exams/linear_search_practice/linear_search_sol.cpp))
 
 Here is the [linked list quiz](notes/week12/linked_list_quiz.pdf)([solutions](notes/week12/linked_list_quiz_sol.pdf)) done in lecture in week 13.
 

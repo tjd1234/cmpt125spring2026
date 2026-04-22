@@ -96,7 +96,7 @@ vector<bitseq> gen_bits(int n)
 
 void test_gen_bits()
 {
-    const int N             = 5;
+    const int N             = 10;
     vector<bitseq> all_bits = gen_bits(N);
     int count               = 0;
     for (bitseq seq : all_bits)
@@ -161,11 +161,23 @@ TODO 4 Write a function print(v) that prints the elements of v without a \n
 at the end.
 
 */
+void print(const vector<int>& v) {
+    for(int n : v) {
+        cout << n << " ";
+    }
+}
 
 /*
 TODO 5 Write a function sum(v) that returns the sum of the elements in v.
 
 */
+int sum(const vector<int>& v) {
+    int result = 0;
+    for(int n : v) {
+        result += n;
+    }
+    return result;
+}
 
 /*
 TODO 6 Consider this list of numbers: 7, 4, 1, 3, 5, 1, 2, 9
@@ -217,7 +229,7 @@ partition.
 void find_partition(const vector<int>& nums)
 {
     const int N             = nums.size();
-    vector<bitseq> all_bits = gen_bits(N);
+    vector<bitseq> all_bits = gen_bits(N); // O(2^n)
     int best_diff           = INT_MAX;
     vector<int> best_a;
     vector<int> best_b;
@@ -314,6 +326,6 @@ TODO 14 Is every problem solvable by an algorithm?
 
 int main()
 {
-    test_gen_bits();
-    // test_find_partition();
+    // test_gen_bits();
+    test_find_partition();
 }
